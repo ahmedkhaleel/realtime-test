@@ -7,7 +7,8 @@ use App\Models\like;
 use App\Models\Question;
 use App\Models\Reply;
 use App\Models\User;
-use Faker\Factory;
+
+use Database\Factories\LikeFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,11 +22,12 @@ class DatabaseSeeder extends Seeder
     {
 
         // \App\Models\User::factory(10)->create();
-       User::factory(10)->create();
-       Category::factory(10)->create();
-       Question::factory(5)->create();
-       Reply::factory(50)->create()->each(function($reply){
-           return $reply->Like()->save(like::factory(10)->make());
+       User::factory()->count(50)->create();
+       Category::factory()->count(10)->create();
+       Question::factory()->count(10)->create();
+       Reply::factory()->count(50)->create()->each(function($reply){
+           return $reply->like()->count(10)->save(Like::factory()->count(50)->make() );
+
        });
 
 

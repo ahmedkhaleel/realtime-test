@@ -29,7 +29,7 @@ class ReplyFactory extends Factory
             return Question::all();
             },
             'user_id' =>function(){
-                return User::all();
+                return User::all()->random();
             }
         ];
     }

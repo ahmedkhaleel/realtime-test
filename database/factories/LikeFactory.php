@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 
+use App\Models\Like;
+use App\Models\Reply;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -13,7 +15,7 @@ class LikeFactory extends Factory
      *
      * @var string
      */
-    protected $model = like::class;
+    protected $model = Like::class;
 
     /**
      * Define the model's default state.
@@ -26,6 +28,7 @@ class LikeFactory extends Factory
             'user_id'=>function(){
                 return User::all()->random();
             },
+
 
         ];
     }
