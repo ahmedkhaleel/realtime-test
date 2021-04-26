@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Support\Str;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -26,5 +27,10 @@ class Question extends Model
 
     public function getPathAttribute(){
         return asset("api/question/$this->slug");
+    }
+
+    public function setSlugAttribute($value){
+        $this->attributes['slug'] = Str::slug($value,"-");
+
     }
 }
