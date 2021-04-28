@@ -24,12 +24,8 @@ class DatabaseSeeder extends Seeder
        User::factory()->count(50)->create();
        Category::factory()->count(10)->create();
        Question::factory()->count(10)->create();
-       Reply::factory()->count(50)->create()->each(function($reply){
-           return $reply->like()->count(10)->save(Like::factory()->count(50)->make() );
-       });
-
-
-
+       Reply::factory()->count(50)->create();
+       Like::factory()->count(50)->create();
 
     }
 }

@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'f8608adb80da0066b5d70eb235328c7652443d2f',
+    'reference' => 'dd27d28e35ec6ed8da30e19a7c7b4ab59f5ce170',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -449,7 +449,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'f8608adb80da0066b5d70eb235328c7652443d2f',
+      'reference' => 'dd27d28e35ec6ed8da30e19a7c7b4ab59f5ce170',
     ),
     'laravel/sail' => 
     array (
@@ -468,6 +468,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '04ad32c1a3328081097a181875733fa51f402083',
+    ),
+    'laravel/ui' => 
+    array (
+      'pretty_version' => 'v3.2.0',
+      'version' => '3.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a1f82c6283c8373ea1958b8a27c3d5c98cade351',
     ),
     'lcobucci/jwt' => 
     array (

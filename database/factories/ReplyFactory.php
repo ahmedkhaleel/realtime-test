@@ -25,12 +25,8 @@ class ReplyFactory extends Factory
     {
         return [
             'body' =>$this->faker->text,
-            'question_id' =>function(){
-            return Question::all();
-            },
-            'user_id' =>function(){
-                return User::all()->random();
-            }
+            'question_id' => Question::all()->random(),
+            'user_id' => User::all()->random(),
         ];
     }
 }
